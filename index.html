@@ -1,28 +1,12 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
-		<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
-		<script src='shopping_mall.js'></script>
-<script src='three.js'></script>
-		
-	</head>
-	<body>
-		
-		<!-- Define your 3d scene and enabled ar.js -->
-	<a-scene embedded arjs='trackingMethod: best;'>
-
-		<!-- Create a anchor to attach your augmented reality -->
-		<a-anchor hit-testing-enabled='true'>
-		<a-box src="https://i.imgur.com/mYmmbrp.jpg" position="0 2 -5" rotation="0 45 45"
-    scale="2 2 2"></a-box>
-
-			<!--<a-portal-door url='https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg' position='0 2 -5' scale='0.7 1 0.7' rotation='0 90 0'><a-portal-door>-->
-
-		</a-anchor>
-
-		<!-- Define a static camera -->
-		<a-camera-static/>
+<!-- AR.js by @jerome_etienne - github: https://github.com/jeromeetienne/ar.js - info: https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf -->
+<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+<body style='margin : 0px; overflow: hidden;'>
+	<a-scene embedded arjs='sourceType: webcam;'>
+		<a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
+		<a-marker-camera preset='hiro'></a-marker-camera>
 	</a-scene>
-		</body>
-		</html>"
+</body>
+</html>
